@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: fut-record-service  # Nombre de la aplicación
+
+  data:
+    mongodb:
+      uri: mongodb+srv://gradeadmin:8EmFywNWZN85pVhD@grades-cluster.oginegu.mongodb.net/fut_database?retryWrites=true&w=majority&tlsAllowInvalidHostnames=true&appName=fut-cluster
+      database: fut_database  # Base de datos 'fut_database'
+
+logging:
+  level:
+    root: INFO
+    org.springframework.data.mongodb.core.ReactiveMongoTemplate: DEBUG
+    org.springframework.web.reactive: DEBUG
+    org.mongodb.driver: INFO
